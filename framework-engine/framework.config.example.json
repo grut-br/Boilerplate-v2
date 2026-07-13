@@ -1,0 +1,14 @@
+{
+  "openai": {
+    "model": "gpt-4.1-mini",
+    "baseUrl": "https://api.openai.com/v1",
+    "timeout": 30000,
+    "maxOutputTokens": 2048,
+    "temperature": 0.7,
+    "maxRetries": 2,
+    "retryDelayMs": 100
+  },
+  "logLevel": "info",
+  "debug": false,
+  "cache": true
+}

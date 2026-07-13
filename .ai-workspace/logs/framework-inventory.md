@@ -50,3 +50,23 @@ Este documento cataloga todos os artefatos estruturais, operacionais e de conhec
 | [documentation.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/documentation.md) | Código autoexplicativo, Docs-as-Code e ADRs. | Todos | Todos | Na escrita de logs, guias e histórico de commits. |
 | [seo.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/seo.md) | Semântica robô, crawling, sitemaps e metadados. | Frontend | Manager | Na estruturação estática de views institucionais. |
 | [business-rules.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/business-rules.md) | Modelagens de estados de regras corporativas vs. sintaxe. | Backend | Manager | Na divisão das ações de negócio em controlador isolado. |
+
+---
+
+## 🏛️ Pacotes Físicos do Monorepo V3.1
+
+Abaixo estão listados os componentes de infraestrutura física criados para o bootstrap da V3.1:
+
+* **CLI (`apps/cli/`):** Interface de linha de comando que gerencia as interações do desenvolvedor humano e comandos do framework.
+* **Engine Core (`packages/engine/`):** Núcleo que executa o planejamento, carregamento de metadados, montagem de prompts e gravação física.
+* **SDK (`packages/sdk/`):** Biblioteca unificada para interações programáticas do ecossistema.
+* **Providers (`packages/providers/`):** Barramento de conexão com as APIs de LLMs normalizadas (OpenAI, Anthropic, Gemini, Ollama, Mock).
+* **Shared (`packages/shared/`):** Tipos TypeScript comuns, constantes, tratadores de erro e utilitários globais.
+
+---
+
+## 📜 Documentações do Framework
+
+* **[FRAMEWORK_ENTRYPOINT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_ENTRYPOINT.md):** Manual principal e ponto de inicialização unificado de execuções lógicas.
+* **[README.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/README.md):** Visão geral, estrutura do monorepo, como executar e roadmap da V3.1.
+* **[ARCHITECTURE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/ARCHITECTURE.md):** Grafo de dependências físicas dos pacotes e mapa de responsabilidades.

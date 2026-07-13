@@ -1,98 +1,130 @@
-# Development Guide — Framework de Desenvolvimento Assistido por IA
+# Development Guide — Framework de Desenvolvimento Assistido por IA V3.0
 
-Este é o manual definitivo do ecossistema de desenvolvimento do Devio Boilerplate V2. Aqui estão estabelecidas as diretrizes operacionais, fluxos de trabalho e a filosofia por trás do nosso "Sistema Operacional" para desenvolvimento integrado entre humanos e agentes de Inteligência Artificial.
+Este é o manual definitivo de direção operacional do **AI Development Framework V3.0**. Aqui estão estabelecidos os conceitos arquiteturais, fluxos conceituais de trabalho e a filosofia por trás do nosso ecossistema integrado entre desenvolvedores humanos, o **Control Plane** (inteligência de planejamento semântico) e a **Execution Engine** (motor cognitivo de modificação de código) utilizando a **Toolchain** local.
 
-## 🎯 Objetivo do Framework
-
-O objetivo deste framework é padronizar, acelerar e elevar a qualidade do desenvolvimento de software através da orquestração de Agentes de IA. Ele não é apenas um template estrutural, mas sim um ambiente onde as regras, processos e validações estão codificados em documentação acessível e consumível por inteligências artificiais. O foco é garantir consistência arquitetural, segurança, performance e design premium em qualquer projeto gerado.
-
-## 🧠 Filosofia de Desenvolvimento
-
-Nosso ecossistema opera sob o princípio de **Desenvolvimento Guiado por Contexto (Context-Driven Development)**.
-1. **Documentação como Código (Docs-as-Code):** As regras, guias e checklists não são apenas leitura para humanos; são instruções executáveis para agentes.
-2. **Modularidade Estrita:** Cada peça do sistema possui uma responsabilidade única, refletida na estrutura do código (FSD) e na documentação (Roles, Workflows, Skills).
-3. **Colaboração Híbrida:** A IA age como parceira de pair-programming, e o humano como revisor, estrategista e aprovador final.
-4. **Hierarquia de Autoridade Clarificada:** O código-fonte sempre prevalece sobre os documentos. O repositório segue regras rígidas de precedência estabelecidas em [.agents/rules/authority-levels.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/authority-levels.md).
-5. **Snapshot Operacional:** O arquivo `PROJECT_STATE.md` deixa de ser tratado como fonte absoluta da verdade e passa a ser reconhecido como um *Snapshot Operacional* (registro do último estado conhecido), permitindo que o código real sempre valide as decisões em caso de conflitos.
-
-## 🔄 Ciclo e Fluxo de Desenvolvimento
-
-O ciclo de vida de uma feature ou projeto segue um fluxo predeterminado estruturado a partir da **Classificação de Tarefas** e **Fast Track**:
-
-### 📊 Classificação de Tarefas (Task Classification)
-Antes de selecionar qualquer Workflow, o Manager deve classificar a tarefa de entrada em um dos quatro níveis de complexidade operacional:
-* **Micro Task:** Ajustes microscópicos, correção de textos/copys, pequenas alterações isoladas ou pequenos ajustes de CSS. Qualifica-se para o fluxo **Fast Track**.
-* **Small Feature:** Lógica de interface ou banco simples, afetando apenas um arquivo sem dependências amplas (ex: novo campo de formulário simples).
-* **Feature:** Funcionalidade padrão com lógica de negócios, componentes visuais e banco (CRUD completo, tela nova, etc.). Exige workflow correspondente.
-* **Epic:** Funcionalidades massivas ou integrações amplas de sistema. Devem ser obrigatoriamente faturadas em múltiplas Features menores antes da execução.
-
-### ⚡ Modo Fast Track (Fluxo Simplificado)
-Para tarefas de nível **Micro Task**, o framework disponibiliza o modo *Fast Track*. 
-* **Quando usar:** Correções de texto, pequenos bugs cosméticos visuais, ajustes isolados em CSS ou arquivos individuais.
-* **Como funciona:** O fluxo é extremamente simplificado: descarta o uso de Templates formais, separação estrita de fatias de Features ou Work Units complexas. O executor realiza a edição e avança diretamente para o commit, sem burocracias de especificações pesadas.
-* **Quando NÃO usar:** Qualquer tarefa contendo lógica de banco, novas rotas, segurança, validação de inputs ou lógica de domínio de dados.
-
-### 🔄 Fluxo de Desenvolvimento Padrão
-1. **Concepção & Planejamento:** Entrada da demanda e classificação pelo Manager.
-2. **Análise de Contexto:** Os agentes consultam a `always-read.md` e o mapa de caminhos no `FRAMEWORK_INDEX.md`.
-3. **Seleção de Workflow:** O Manager seleciona o workflow correspondente (ex: `new-feature.md`, `crud.md`).
-4. **Execução por Papéis (Roles):** A tarefa é fragmentada em Work Units e delegada para as respectivas *Roles* (`frontend.md` ou `backend.md`).
-5. **Revisão:** Validação por meio do workflow `review.md` e do Checklist adequado (ex: `feature-done.md`).
-6. **Deploy & Registro:** Atualização de logs, atualização do *Snapshot* no `PROJECT_STATE.md` e finalização.
-
-## 🛠 Como Utilizar as Ferramentas do Ecossistema
-
-### Chats Externos e IDEs (Integração IA)
-* **Chats Externos:** Utilize-os para planejar tarefas macro, tirar dúvidas de arquitetura complexa ou gerar novos escopos. Sempre forneça acesso ao `PROJECT_STATE.md` e aos `workflows` aplicáveis para dar contexto inicial à IA.
-* **IDE (Antigravity/Cursor/Windsurf):** Utilize o agente integrado à IDE para a codificação *hands-on*. A IDE tem acesso direto aos servidores MCP locais e às ferramentas de terminal, permitindo a execução autônoma (sob supervisão) de testes, auditorias e edições diretas de arquivos.
-
-### 📚 Biblioteca de Skills (`.agents/skills/`)
-As *Skills* representam a biblioteca de conhecimento especializado da agência catalogada no arquivo `AI_ARSENAL.md`. 
-* **Autossuficiência do Framework:** O Framework é projetado para ser autossuficiente na maior parte das tarefas cotidianas de engenharia utilizando apenas as *Rules*, *Roles*, *Workflows*, *Knowledge Layer* e as especificações recebidas.
-* **Caráter Opcional:** As Skills nunca substituem ou se sobrepõem às diretrizes principais do framework. Elas representam um complemento especializado (ex: padrões de acessibilidade extrema, conexões de infraestrutura específicas).
-* **Prevenção de Context Bloat:** O carregamento indiscriminado de Skills aumenta drasticamente o consumo de tokens e a latência das IAs. Elas devem ser invocadas apenas quando houver benefício técnico explícito e necessidade declarada pelo Manager na triagem inicial.
-
-### Como Utilizar Roles (`.agents/roles/`)
-As *Roles* fragmentam o comportamento da IA. Em vez de um "agente que faz tudo", orientamos o agente a assumir um papel específico:
-* `manager.md`: Orquestra o projeto, atualiza estados e divide tarefas.
-* `frontend.md` / `backend.md` / `database.md`: Especialistas focados apenas em suas verticais, garantindo profundidade e rigor técnico.
-* `reviewer.md`: Validador focado em qualidade, testes, code review avançado e checklists de conformidade.
-
-### Como Utilizar Workflows (`.agents/workflows/`)
-Os *Workflows* são receitas passo a passo para tarefas recorrentes (ex: criar uma landing page, implementar um CRUD, corrigir um bug). Quando uma demanda surge, o agente deve selecionar o fluxo correspondente e executá-lo linearmente.
-
-### Como Funciona a Documentação
-A documentação em `.ai-workspace/` atua como o sistema nervoso do projeto e opera em perfeita harmonia com o código-fonte (que é a autoridade máxima):
-* O passado fica em `completed/` e `logs/`.
-* O presente opera em `active/` e no Snapshot `PROJECT_STATE.md`.
-* O futuro é desenhado em `roadmap/` e `specifications/`.
-* **ADR (Architecture Decision Records):** Toda decisão arquitetural relevante (que mude caminhos de diretórios, padrões de dados ou bibliotecas) deve ser formalizada gerando um arquivo a partir de [.ai-workspace/templates/ADR_TEMPLATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/templates/ADR_TEMPLATE.md) na pasta `.ai-workspace/decisions/`. Decisões antigas nunca são reescritas; novas decisões substituem antigas através da criação de novas ADRs, mantendo o histórico de evolução técnica imutável.
-
-## 📁 Organização de Projetos
-
-Independentemente de ser um site institucional ou um painel SaaS, todo projeto segue as convenções delineadas no `TEMPLATE_INSTRUCTIONS.md`, com forte ênfase em **Route Groups** e **Feature-Sliced Design (FSD)**. Nenhuma funcionalidade deve misturar responsabilidades globais e locais, garantindo máxima reutilização.
-
-## ✅ Boas Práticas
-* **Leia antes de Escrever:** Agentes e desenvolvedores sempre devem consultar as regras base antes de propor alterações.
-* **Mantenha o Estado Atualizado:** O `PROJECT_STATE.md` deve ser um reflexo em tempo real da aplicação, atuando como o elo de sincronia para novos agentes.
-* **Pequenos Passos (Baby Steps):** Mudanças grandes devem ser fracionadas em etapas menores para revisão eficiente e minimização de riscos.
-* **Design Premium e Acessibilidade:** Nunca negocie a qualidade visual e a acessibilidade universal (A11y). O padrão de saída deve impressionar o usuário final.
+> [!IMPORTANT]
+> **Nota de Alinhamento Arquitetural (Sprint V3.1-01A):**
+> A arquitetura de monorepo experimental da Sprint V3.1-01 foi reclassificada como **Proof of Concept (PoC)** e completamente removida do Boilerplate para evitar acoplamento físico prematuro.
+> A Framework Engine V3.1 física será desenvolvida em um **repositório independente**. O Boilerplate permanece unicamente como um **consumidor independente** da Engine, orientando suas execuções através dos metadados e regras descritas na camada cognitiva local (`.agents/` e `.ai-workspace/`).
 
 ---
 
-## ⚙️ Fluxo Operacional
+## 🎯 Objetivo do Framework
 
-O funcionamento do framework em um projeto real segue um fluxo operacional rigoroso e sequencial dividido em 12 etapas de execução:
+O objetivo deste framework é padronizar, acelerar e elevar a qualidade do desenvolvimento de software através da integração controlada e determinística de motores cognitivos de IA. Em vez de simular personas de equipe, o framework fornece um conjunto de **Capabilities** (capacidades técnicas modulares) que executam ações diretas sobre o repositório, garantindo consistência arquitetural, segurança, performance e design premium.
 
-1. **Conversa no Chat Externo:** Alinhamento estratégico com o usuário humano sobre a nova funcionalidade, tela, CRUD ou correção de bug.
-2. **Geração de Template:** Ao final do diálogo, preenchimento do template correspondente da pasta `.ai-workspace/templates/` (ex: `feature-template.md`, `crud-template.md`).
-3. **Armazenamento em `.ai-workspace/specifications/`:** Salvamento do template preenchido como um arquivo de especificação estruturado.
-4. **Leitura pelo Manager:** Abertura e análise da especificação pelo agente que assume a role `manager.md`.
-5. **Seleção do Workflow:** Identificação e ativação do workflow mais aderente na pasta `.agents/workflows/` (ex: `new-feature.md`, `crud.md`).
-6. **Divisão em Features:** Fracionamento de escopos em entregas lógicas de negócio.
-7. **Divisão em Work Units:** Segmentação de cada feature em minúsculas Work Units técnicas de responsabilidade única.
-8. **Delegação ao Role:** Passagem de bastão do Manager para a role especialista correspondente (`frontend.md` ou `backend.md`), fornecendo a Work Unit e as referências conceituais da `Knowledge Layer` pertinentes.
-9. **Execução:** Codificação pura efetuada de forma isolada pela role correspondente, sob as diretrizes do `coding-style.md`.
-10. **Checklist:** Submissão do código pronto ao checklist de validação de qualidade correspondente (ex: `feature-done.md`, `crud-done.md`) sob a supervisão do workflow `review.md`.
-11. **Atualização do PROJECT_STATE:** Atualização sistemática do status da tarefa e do histórico de execução no `PROJECT_STATE.md`.
-12. **Conclusão:** Chancela final da entrega e fechamento do ciclo, liberando a base de código para a próxima Work Unit.
+---
+
+## 🧠 Filosofia de Desenvolvimento
+
+Nosso ecossistema opera sob o princípio de **Desenvolvimento Guiado por Contexto (Context-Driven Development)**:
+1. **Documentação como Código (Docs-as-Code):** As diretrizes de design, regras de codificação e checklists técnicos servem de insumo direto para o **Context Builder**, que constrói dinamicamente o escopo para a Engine.
+2. **Modularidade por Capabilities:** Nenhuma IA opera com escopo aberto. O planejamento de modificações é faturado em tarefas atômicas executadas sob uma Capability técnica explícita.
+3. **Plano de Controle Semântico (Control Plane):** A análise de demandas do usuário e a estruturação de planos de implementação ocorrem em um nível conceitual, separado da execução de escrita de código.
+4. **Validação por Toolchain:** Toda alteração é submetida automaticamente a testes, linters e builds locais fornecidos pela Toolchain de desenvolvimento.
+5. **Estado de Execução Contínuo (State):** O andamento do projeto é monitorado e sincronizado transacionalmente no repositório.
+
+---
+
+## 🔄 Ciclo e Fluxo de Desenvolvimento Conceitual
+
+O ciclo de vida de uma modificação técnica segue um fluxo conceitual em 5 etapas:
+
+### 1. Triagem & Classificação
+A demanda de entrada do usuário é analisada pelo **Control Plane** e classificada de acordo com a complexidade técnica:
+* **Micro Task:** Pequenos ajustes cosméticos, correções textuais ou alterações de layout isoladas. Qualificam-se para execução simplificada (Fast Track).
+* **Small Feature:** Modificações simples de interface ou lógica de dados que afetam escopos limitados.
+* **Feature:** Funcionalidades padrão contendo lógica de interface, regras de negócio e validações.
+* **Epic:** Escopos amplos que devem ser decompostos pelo Control Plane antes de iniciar o desenvolvimento.
+
+### 2. Planejamento Semântico
+O Control Plane gera o plano conceitual de modificações, mapeando os arquivos afetados e as dependências estruturais do repositório.
+
+### 3. Montagem do Contexto (Context Builder)
+O **Context Builder** recolhe as regras absolutas, as diretrizes de código necessárias e os arquivos de código correspondentes, montando o payload de contexto ideal para a Execution Engine.
+
+### 4. Execução (Execution Engine & Capabilities)
+A **Execution Engine** consome as capacidades técnicas modulares (**Capabilities**) necessárias para aplicar as alterações físicas nos arquivos do repositório de forma atômica e limpa.
+
+### 5. Homologação & Commit
+A **Toolchain** local executa as validações automáticas (lint, TypeScript compiler, testes unitários). Se aprovado, o estado do projeto (**State**) é atualizado e o ciclo é encerrado.
+
+---
+
+## 🏛️ Módulos da Engine V3.0 (Congelados)
+
+Os seguintes módulos e conceitos compõem o núcleo operacional estável da Framework Engine:
+* **Control Plane:** Camada analítica responsável pelo parsing de especificações e orquestração do grafo de modificações.
+* **Execution Engine:** Motor técnico de escrita que traduz o plano de execução em edições físicas reais de código no repositório.
+* **Capabilities Library:** Coleção de especializações cognitivas modulares (ex: `planning`, `result-processor`).
+* **Context Builder:** Algoritmo dinâmico de hidratação de contexto mínimo.
+* **Runtime State:** Memória temporária de execução e controle transacional de reversão e isolamento.
+* **Toolchain Gateway:** Conector físico para auditoria de validadores locais (compiladores, linters, testes).
+* **Result Processor:** Consolidador de fechamento de ciclo e atualização documental de progresso.
+
+---
+
+## ✅ Boas Práticas Gerais
+* **Abstrações Limpas:** Mantenha separação clara de responsabilidades no código (SoC) para facilitar a leitura da Execution Engine.
+* **Sincronia do Estado:** Mantenha o arquivo `PROJECT_STATE.md` atualizado a cada avanço para manter a sintonia semântica com o Control Plane.
+* **Fidelidade à Toolchain:** Correções apontadas pelo linter local devem ser priorizadas imediatamente antes de prosseguir com qualquer incremento lógico.
+
+---
+
+## ❄️ Engine Freeze Policy (Política de Congelamento)
+
+Após a consolidação da versão 3.0, os seguintes elementos fundamentais da Framework Engine encontram-se permanentemente congelados:
+* **Módulos do Núcleo (Core Modules):** A estrutura de execução lógicas dos módulos.
+* **Pipeline de Execução:** O fluxo determinístico e sequencial de transações.
+* **Capabilities Contracts:** A API conceitual obrigatória de Capabilities.
+* **Framework Index:** A tabela de resolução e mapeamento de contexto.
+* **Runtime:** As regras de alocação de memória volátil e reversões físicas.
+
+> [!WARNING]
+> Quaisquer modificações sobre estes arquivos ou conceitos estão estritamente proibidas para o desenvolvimento de features comuns. Ajustes arquiteturais nestes componentes congelados somente podem ocorrer mediante a aprovação explícita e emissão de um registro formal de decisão arquitetural (ADR).
+
+---
+
+## 🏛️ Architecture Stability Rules (Regras de Estabilidade)
+
+A governança assistida por IA da V3 impõe as seguintes restrições de crescimento estrutural:
+1. **Sem Crescimento Horizontal do Core:** A Framework Engine não pode expandir-se adicionando novos rituais ou arquivos no núcleo.
+2. **Extensibilidade por Extensão:** Novas funcionalidades e comportamentos técnicos devem entrar exclusivamente através das seguintes estruturas do ecossistema:
+   * **Capabilities:** Criação de novos drivers de escrita isolados (ex: `write_logic`, `write_styles`).
+   * **Specifications:** Detalhamento funcional de novas regras de negócio e de interface.
+   * **ADRs:** Registro de novas tomadas de decisões arquiteturais do projeto.
+   * **Templates:** Padronização de novos placeholders reutilizáveis.
+3. **Imutabilidade da Engine:** Capabilities operacionais são executoras; elas não modificam, herdam ou alteram as premissas estruturais da própria Engine de execução.
+
+---
+
+## 🛠️ Operational Usage (Uso Operacional da Engine)
+
+Esta seção define como iniciar, interromper, reiniciar e classificar tarefas lógicas no ecossistema da Framework Engine V3.0.
+
+### 🔌 Inicialização, Interrupção e Reinicialização
+
+1. **Como Iniciar:**
+   * Crie uma Specification Markdown em `.ai-workspace/specifications/[nome-da-feature].md` contendo escopo e objetivos.
+   * Inicialize a Engine lendo o ponto de entrada oficial [FRAMEWORK_ENTRYPOINT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_ENTRYPOINT.md).
+   * O Control Plane disparará a triagem inicial pela Planning Capability.
+2. **Como Interromper:**
+   * Para suspender a execução transacional ativa da Engine em caso de desvios, o desenvolvedor humano deve emitir a instrução de `ABORT` no console.
+   * O Result Processor interceptará o comando, efetuará o checkout/reversão dos arquivos modificados temporariamente para o último estado íntegro no Git e descartará o Runtime State.
+3. **Como Reiniciar:**
+   * Apague o UUID da transação falha no Runtime State.
+   * Garanta que os arquivos de código estejam no estado estável anterior e execute a limpeza do buffer.
+   * Dispare a Engine novamente a partir do [FRAMEWORK_ENTRYPOINT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_ENTRYPOINT.md) referenciando a especificação de origem.
+
+### 📐 Tipologias de Tarefas (Divisão e Escopo)
+
+* **Como criar Micro Tasks (Fast Track):**
+  * Use para manutenções rápidas e pontuais (ex: "Ajustar padding", "Mudar cor").
+  * A Engine ignora a criação física de Work Units separadas e executa a modificação sob uma transação acelerada de bypass direto (Fast Track), rodando validações apenas no arquivo afetado.
+* **Como criar Features (Esteira Padrão):**
+  * Use para novos componentes ou lógicas integradas (ex: "Criar formulário de contato").
+  * O planejador gera entre 2 e 4 Work Units de responsabilidade atômica que executam de forma linear. Cada WU consome uma Capability especializada (ex: `v3-capability-ui`, `v3-capability-testing`).
+* **Como criar Epics (Divisão em Múltiplos Planos):**
+  * Use para transformações estruturais complexas (ex: "Substituir banco de dados").
+  * A Planning Capability é proibida de gerar uma única WU gigante. Ela deve estruturar um plano macro de decomposição de negócio e exigir que o Control Plane divida o Epic em múltiplas subespecificações sequenciais de Features antes de liberar o pipeline físico de escrita.
+

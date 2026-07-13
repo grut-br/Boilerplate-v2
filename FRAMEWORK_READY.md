@@ -1,14 +1,14 @@
-# Framework Ready — Certificação Oficial V2.1.1
+# Framework Ready — Certificação Oficial V3.0
 
-Este documento chancela a versão atual do AI Development Framework (V2.1.1) como pronta para uso. Ele atua como o ponto de partida conceitual e operacional para qualquer projeto a ser desenvolvido neste repositório.
+Este documento chancela o status arquitetural da versão V3.0 do AI Development Framework. Esta versão define a direção conceitual para o desenvolvimento da engine cognitiva determinística.
 
 ## 📅 Dados da Versão
-* **Versão Atual:** v2.1.1
-* **Data da Versão:** 2026-07-09
-* **Status:** Framework Frozen (Ready for Real Project)
+* **Versão Atual:** v3.0
+* **Data da Versão:** 2026-07-10
+* **Status:** Architecture Frozen (Ainda NÃO implementada)
 
 ## 🎯 Objetivo do Framework
-O AI Development Framework V2.1.1 é um ecossistema operacional voltado para o desenvolvimento assistido por IA de forma incremental, encapsulada e de alta fidelidade técnica. Ele visa reduzir o consumo de tokens das IAs (via indexação inteligente e consulta opcional de Skills), desburocratizar a execução de pequenas manutenções (via Fast Track), formalizar a evolução da arquitetura (via ADRs) e blindar o código-fonte por meio de níveis de autoridade explícitos e checkpoints rigorosos de qualidade.
+O AI Development Framework V3.0 foca na eliminação da simulação de equipes (personas) em prol de capacidades funcionais puras (Capabilities) acopladas a uma Engine de Execução e a uma Toolchain automatizada local. O objetivo é reduzir o consumo de tokens através de montagem sob demanda (Context Builder) e garantir integridade de estado operacional (State).
 
 ## 📂 Estrutura Completa e Componentes Existentes
 O ecossistema é composto pelas seguintes camadas organizacionais e arquivos:

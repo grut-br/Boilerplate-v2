@@ -2,6 +2,11 @@
 
 O **Devio Master Boilerplate** é o template mestre da agência para a criação de sites e painéis SaaS modernos. Ele foi desenvolvido com o foco em desempenho de elite, portabilidade e herança estrita de layout.
 
+> [!IMPORTANT]
+> **Nota de Alinhamento Arquitetural (Sprint V3.1-01A):**
+> A arquitetura de monorepo experimental da Sprint V3.1-01 foi reclassificada como **Proof of Concept (PoC)** e completamente removida do Boilerplate para evitar acoplamento físico prematuro.
+> A Framework Engine V3.1 física será desenvolvida em um **repositório independente**. O Boilerplate permanece unicamente como um **consumidor independente** da Engine, orientando suas execuções através dos metadados e regras lógicas descritas na camada cognitiva local (`.agents/` e `.ai-workspace/`).
+
 ---
 
 ## 🏗️ Arquitetura

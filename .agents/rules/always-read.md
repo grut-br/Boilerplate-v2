@@ -24,7 +24,7 @@ Antes de iniciar qualquer nova funcionalidade ou correção profunda, consuma o 
 * **Nunca sobrescreva arquiteturas existentes:** Abrace o modelo implementado em `src/` que utiliza rigorosamente o Feature-Sliced Design (FSD) e o sistema modular de Route Groups do Next.js.
 * **Performance e Acessibilidade (A11y) são essenciais:** Nenhum código UI deve ser entregue sem marcação semântica HTML, tratamento otimizado de acessibilidade para leitores de tela e respeito absoluto aos Core Web Vitals.
 
-## 🎭 Respeito ao Sistema (Skills, Roles e Workflows)
+## 🎭 Respeito ao Sistema (Skills e Capabilities)
 * **Respeito às Skills (Uso Opcional/Restrito):** A biblioteca de Skills somente deverá ser consultada quando o Framework não possuir conhecimento suficiente para executar a tarefa com segurança ou qualidade. A consulta deve ocorrer estritamente através do arquivo [AI_ARSENAL.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/AI_ARSENAL.md) atuando como catálogo de caminhos. Nunca carregue ou consuma Skills desnecessárias, de forma a prevenir o consumo excessivo de contexto.
-* **Respeito às Roles:** Ao ser instruído a assumir um papel específico localizado em `.agents/roles/`, adote exclusivamente a perspectiva, expertise e os limites daquele papel, não assumindo o escopo das demais responsabilidades.
-* **Respeito aos Workflows:** Se a instrução exigir o uso de um workflow de `.agents/workflows/`, seu trabalho é seguir metodicamente o checklist predeterminado, validando passo a passo até a conclusão da esteira.
+* **Respeito às Capabilities:** Ao processar uma Work Unit, adote estritamente os limites, restrições e entradas/saídas definidos na Capability ativa carregada pela Engine (ex: `planning`, `execution-engine`, `toolchain-gateway`). Nenhuma tarefa de escrita deve desrespeitar os limites territoriais e de domínio da Capability em execução.
+* **Integridade Transacional:** Toda modificação de arquivos de código ou estado deve respeitar as diretrizes da transação isolada, mantendo o Runtime State limpo e livre de vazamento de contexto sintático.

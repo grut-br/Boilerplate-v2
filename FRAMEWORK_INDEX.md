@@ -1,63 +1,81 @@
-# Mapa de Contexto do Framework (Framework Index)
+# Índice do Framework (Framework Index) — V3.0
 
-Este documento atua como o mapa de navegação rápida do ecossistema do framework. Seu objetivo é indicar de forma cirúrgica quais arquivos de regras, papéis, fluxos e bases conceituais devem ser carregados no contexto das inteligências artificiais para cada situação de desenvolvimento, reduzindo drasticamente o consumo de tokens e evitando sobrecarga de contexto.
-
----
-
-## 🗺️ Mapa de Diretrizes por Situação
-
-### 1. Planejamento de Sprints e Análise de Briefings
-* **Papel (Role) Principal:** [manager.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/roles/manager.md)
-* **Workflow Recomendado:** [new-feature.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/workflows/new-feature.md)
-* **Bases da Knowledge Layer:** [architecture-principles.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/architecture-principles.md) e [business-rules.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/business-rules.md)
-* **Regras (Rules) Obrigatórias:** [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [authority-levels.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/authority-levels.md)
-
-### 2. Implementação de Interfaces e UI/UX (Frontend)
-* **Papel (Role) Principal:** [frontend.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/roles/frontend.md)
-* **Workflow Recomendado:** [landing-page.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/workflows/landing-page.md) ou [new-feature.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/workflows/new-feature.md)
-* **Bases da Knowledge Layer:** [ui.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/ui.md), [ux.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/ux.md), [accessibility.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/accessibility.md) e [performance.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/performance.md)
-* **Regras (Rules) Obrigatórias:** [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [coding-style.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/coding-style.md)
-
-### 3. Implementação de Lógica, Servidor e Persistência (Backend)
-* **Papel (Role) Principal:** [backend.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/roles/backend.md)
-* **Workflow Recomendado:** [crud.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/workflows/crud.md) ou [new-feature.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/workflows/new-feature.md)
-* **Bases da Knowledge Layer:** [security.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/security.md), [business-rules.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/business-rules.md), [testing.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/testing.md) e [clean-code.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/clean-code.md)
-* **Regras (Rules) Obrigatórias:** [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [coding-style.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/coding-style.md)
-
-### 4. Resolução de Falhas e Incidentes (Bugfix)
-* **Papel (Role) Principal:** [backend.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/roles/backend.md) ou [frontend.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/roles/frontend.md)
-* **Workflow Recomendado:** [bugfix.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/workflows/bugfix.md)
-* **Bases da Knowledge Layer:** [testing.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/testing.md), [clean-code.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/clean-code.md) e [documentation.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/documentation.md)
-* **Regras (Rules) Obrigatórias:** [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [authority-levels.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/authority-levels.md)
-
-### 5. Revisão de Qualidade e Homologação (Code Review)
-* **Papel (Role) Principal:** [reviewer.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/roles/reviewer.md) (intermediado no fluxo de IAs)
-* **Workflow Recomendado:** [review.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/workflows/review.md)
-* **Bases da Knowledge Layer:** [clean-code.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/clean-code.md), [testing.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/testing.md), [security.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/security.md) e [performance.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/performance.md)
-* **Regras (Rules) Obrigatórias:** [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [coding-style.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/coding-style.md)
-* **Checklist Aplicável:** [feature-done.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/checklists/feature-done.md) ou correspondente da demanda.
-
-### 6. Divulgação ou Promoção de Código (Deploy)
-* **Papel (Role) Principal:** Desenvolvedor Humano / Agente Operacional
-* **Checklist Aplicável:** [deploy-done.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/checklists/deploy-done.md)
-* **Bases da Knowledge Layer:** [performance.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/performance.md) e [security.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/knowledge/security.md)
-* **Regras (Rules) Obrigatórias:** [authority-levels.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/authority-levels.md)
+Este documento atua estritamente como o **Mapa de Navegação Rápida** do ecossistema do framework. Seu objetivo é indicar a localização, regras de carregamento e propriedade intelectual de cada arquivo do repositório para o `v3-capability-context-builder` em tempo de execução.
 
 ---
 
-## 🛠️ Consulta de Skills (Biblioteca Opcional)
+## 🗺️ Catálogo de Caminhos e Propriedade de Conhecimento
 
-A biblioteca de Skills da agência funciona sob a filosofia **"Framework First, Skills Second"**. O arquivo [AI_ARSENAL.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/AI_ARSENAL.md) serve estritamente como um índice ou catálogo de Skills disponíveis. Ele **nunca deve ser carregado completamente no contexto da IA**.
+| Documento / Caminho | Camada | Quando Carregar (Contexto) | Proprietário (Single Source of Truth) |
+| :--- | :--- | :--- | :--- |
+| `always-read.md` | Foundation | **Sempre Carregar** (Todas as execuções) | Regras inegociáveis de controle global. |
+| [FRAMEWORK_ENTRYPOINT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_ENTRYPOINT.md) | Entrypoint | Inicialização da Engine. | Ponto de partida operacional único do ecossistema. |
+| [V3_ARCHITECTURE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/V3_ARCHITECTURE.md) | Foundation | Alinhamento arquitetural macro. | Visão geral da arquitetura de transição V3.0. |
+| [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md) | Foundation | Alinhamento de filosofia de desenvolvimento. | Princípios de CDD e políticas de congelamento. |
+| [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DOCUMENTATION_GUIDELINES.md) | Foundation | Modificações lógicas ou de documentação. | Diretrizes de ownership e camadas lógicas. |
+| [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md) | Foundation | Mapeamento de caminhos e contexto (Loader/Builder). | Este arquivo (Mapa de navegação). |
+| [FRAMEWORK_ENGINE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_ENGINE.md) | Foundation | Visão geral resumida dos módulos lógicos. | Motor Cognitivo central. |
+| [FRAMEWORK_EXECUTION.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_EXECUTION.md) | Modules | Carregamento da Engine de Escrita. | Manual técnico do Prompt Assembly Pipeline. |
+| [FRAMEWORK_TOOLCHAIN.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_TOOLCHAIN.md) | Modules | Validação local por terminal físico. | Manual técnico de ferramentas sintáticas locais. |
+| [FRAMEWORK_RUNTIME.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_RUNTIME.md) | Modules | Execução de controle temporário e RAM. | Manual técnico de isolamento e reversões. |
+| [FRAMEWORK_RESULT_PROCESSOR.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_RESULT_PROCESSOR.md) | Modules | Fechamento transacional e homologação. | Manual técnico de julgamento e arquivamento. |
+| [CAPABILITY_CONTRACT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/CAPABILITY_CONTRACT.md) | Contracts | Criação ou validação de Capabilities. | Contrato padrão contendo regras de interface. |
+| [`.agents/capabilities/planning.md`](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/capabilities/planning.md) | Capabilities | Ativação de análise e decomposição de requisitos. | Regras da Planning Capability. |
+| `.agents/capabilities/capability-loader.md` | Capabilities | Ativação da triagem de metadados. | Regras do selecionador de Capabilities. |
+| `.agents/capabilities/context-builder.md` | Capabilities | Ativação do hidratador dinâmico. | Regras da infraestrutura de contexto. |
+| `.agents/capabilities/execution-engine.md` | Capabilities | Ativação do motor de escrita física. | Regras do escritor do repositório. |
+| `.agents/capabilities/toolchain-gateway.md` | Capabilities | Ativação da auditoria por terminal. | Regras do validador cego local. |
+| `.agents/capabilities/runtime-state.md` | Capabilities | Ativação de isolamento temporário. | Regras da memória RAM operacional. |
+| `.agents/capabilities/result-processor.md` | Capabilities | Ativação da homologação final. | Regras da decisão de fechamento da WU. |
+| [`.agents/capabilities/documentation.md`](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/capabilities/documentation.md) | Capabilities | Geração de documentações, READMEs e changelogs. | Regras da Documentation Capability. |
+| [`.agents/capabilities/analysis.md`](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/capabilities/analysis.md) | Capabilities | Análises estruturais e auditorias lógicas passivas. | Regras da Analysis Capability. |
+| `.ai-workspace/specifications/` | Specifications | Execução da Work Unit ativa correspondente. | Requisitos funcionais da feature. |
+| `.ai-workspace/templates/` | Templates | Inicialização de novas especificações. | Estruturas e placeholders base. |
+| `.ai-workspace/logs/` | Logs | Auditoria histórica pós-fechamento. | Relatórios cronológicos de sprints. |
+| `.ai-workspace/roadmap/` | Roadmaps | Planejamento estratégico. | Metas cronológicas do projeto de longo prazo. |
+| `.ai-workspace/decisions/` | ADRs | Análise de desvios arquiteturais passados. | Registros formais de decisões lógicas. |
 
-### 🔄 Fluxo de Decisão para Uso de Skills:
+---
 
-1. **Resolver utilizando Framework:** A IA deve tentar executar a Work Unit utilizando exclusivamente as *Rules*, *Roles*, *Workflows*, especificações e a *Knowledge Layer*.
-2. **Existe conhecimento especializado necessário?**
-   * ❌ **NÃO:** O desenvolvimento segue o fluxo normal de execução do framework, finalizando a Work Unit sem carregar nenhuma Skill.
-   * ──> **SIM:** A IA consulta o índice [AI_ARSENAL.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/AI_ARSENAL.md) para identificar qual Skill específica resolve a lacuna técnica.
-3. **Seleção Cirúrgica:** O Manager ou o executor seleciona **apenas a única ou o mínimo necessário de Skills** indicadas no catálogo.
-4. **Execução:** O arquivo da Skill selecionada (ex: `SKILL.md` dentro de sua respectiva pasta) é aberto, consumido de forma isolada e executado.
+## 💧 Regras de Resolução de Contexto (Context Resolution Rules)
 
-### 🚫 Regras de Utilização
-* Nunca carregue uma pasta de Skill inteira se apenas a leitura conceitual basta.
-* Skills servem para complementar o conhecimento em vetores específicos (acessibilidade refinada, lógica do Supabase, etc.), mas **jamais prevalecem ou substituem as regras base de codificação do framework**.
+Esta matriz define quais arquivos da tabela de caminhos o `v3-capability-context-builder` está autorizado a carregar no buffer cognitivo para cada Capability ativa, impedindo Context Bloat:
+
+| Capability | Documentos Obrigatórios (Mandatory) | Documentos Opcionais (Optional) | Documentos Proibidos (Forbidden) |
+| :--- | :--- | :--- | :--- |
+| **Planning** | `PROJECT_STATE.md`, `specifications/` (ativos), `decisions/` (ADRs), `FRAMEWORK_ENGINE.md` | Nenhuma | `knowledge/ui.md`, `knowledge/security.md`, `checklists/`, `src/` |
+| **Capability Loader** | `CAPABILITY_CONTRACT.md`, `FRAMEWORK_INDEX.md`, `Work Unit Metadados` | Nenhuma | `knowledge/ui.md`, `knowledge/security.md`, `checklists/`, `src/` |
+| **Context Builder** | `FRAMEWORK_INDEX.md`, `CAPABILITY_CONTRACT.md`, `Work Unit Metadados` | Nenhuma | `src/` |
+| **Execution Engine** | `FRAMEWORK_EXECUTION.md`, `rules/always-read.md`, `src/` (arquivos afetados) | `rules/coding-style.md` | `knowledge/`, `roadmap/`, `src/` (exceto afetados) |
+| **Toolchain Gateway** | `FRAMEWORK_TOOLCHAIN.md`, `rules/always-read.md`, lista de arquivos modificados | Checklists de deploy | `knowledge/`, `roadmap/`, `src/` (exceto afetados) |
+| **Runtime State** | `FRAMEWORK_RUNTIME.md`, `rules/always-read.md`, `Work Unit Metadados` | Nenhuma | `src/` |
+| **Result Processor** | `FRAMEWORK_RESULT_PROCESSOR.md`, `PROJECT_STATE.md`, `rules/always-read.md`, logs do Runtime | Checklists de deploy | `knowledge/`, `roadmap/`, `src/` |
+| **Documentation** | `DOCUMENTATION_GUIDELINES.md`, `rules/always-read.md`, `specifications/` (ativos) | `PROJECT_STATE.md`, `FRAMEWORK_INDEX.md` | `src/` (exceto assinaturas), arquivos de configuração (`package.json`, etc.) |
+| **Analysis** | `rules/always-read.md`, `rules/coding-style.md`, `specifications/` (ativos) | `PROJECT_STATE.md`, `FRAMEWORK_INDEX.md` | `src/` (exceto arquivos alvo de leitura), arquivos de configuração (`package.json`, etc.) |
+
+---
+
+## 🛠️ Matriz Operacional de Capabilities (Operational Capability Matrix)
+
+Esta matriz registra o status de homologação, proprietários e templates de referência associados às Capabilities operacionais da Engine V3.0:
+
+| Capability | Status | Proprietário (Owner) | Contexto Obrigatório | Template Utilizado |
+| :--- | :--- | :--- | :--- | :--- |
+| **Planning** | Operational (Validated) | Engine Core (Control Plane) | [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md), [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md) | [work-unit-template-v3.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/templates/work-unit-template-v3.md) |
+| **Documentation** | Operational (Validated) | Engine Core (Execution Engine) | [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md), [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DOCUMENTATION_GUIDELINES.md) | Templates do workspace e especificações |
+| **Analysis** | Plugin (Operational) | Engine Core (Execution Engine) | [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md), [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md) | Relatórios estruturados e logs em markdown |
+
+---
+
+## 🧭 Matriz de Resolução de Capabilities (Capability Resolution Matrix)
+
+Esta matriz orienta o `v3-capability-loader` na triagem, pontuação e escolha das Capabilities no ecossistema:
+
+| Capability | Domains | Keywords de Match | Priority | Confidence | Fallback |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Planning** | `["planning", "specifications", "work-units"]` | `["requirements", "decomposition", "wu-id"]` | 10 | High | `v3-capability-general` |
+| **Documentation** | `["documentation", "specifications", "readmes"]` | `["readme", "markdown", "changelog"]` | 9 | High | `v3-capability-general` |
+| **Analysis** | `["analysis", "audits", "reports"]` | `["fsd", "static-audit", "imports"]` | 7 | Medium | `v3-capability-general` |
+
+
+

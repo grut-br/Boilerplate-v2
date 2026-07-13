@@ -10,7 +10,8 @@ export async function updateSession(request: NextRequest) {
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!supabaseUrl || !supabaseAnonKey) {
-    throw new Error("Falta configurar as variáveis de ambiente do Supabase.");
+    console.warn(" Supabase Keys não encontradas. Middleware rodando em modo Pass-through (Apenas Frontend).");
+    return supabaseResponse;
   }
 
   const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {

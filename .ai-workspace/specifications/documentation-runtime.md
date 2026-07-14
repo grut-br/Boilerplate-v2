@@ -29,9 +29,9 @@ A etapa de recepção é responsável por inicializar a transação operacional 
 A etapa de hidratação reúne as dependências teóricas e regras semanticas necessárias para orientar a escrita:
 
 *   **Ação:** O `Context Builder` executa o algoritmo de Context Hydration.
-*   **Resolução de Contexto:** Consulta o [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md) e carrega de forma compulsória no buffer cognitivo os arquivos:
+*   **Resolução de Contexto:** Consulta o [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md) e carrega de forma compulsória no buffer cognitivo os arquivos:
     *   [.agents/rules/always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) (Regras inegociáveis).
-    *   [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DOCUMENTATION_GUIDELINES.md) (Normas de escrita e ownership).
+    *   [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DOCUMENTATION_GUIDELINES.md) (Normas de escrita e ownership).
 *   **Isolamento Estrito:** Garante que a pasta `src/` e arquivos confidenciais do banco de dados (Supabase) ou chaves estejam declarados como *Forbidden Context* e expurgados do payload.
 
 ---
@@ -63,7 +63,7 @@ A etapa de entrega consolida o progresso operacional de longo prazo e limpa a me
 
 *   **Ação:** O `Result Processor` analisa o status recebido da Toolchain.
 *   **Consolidação de Sucesso:**
-    *   Marca a Work Unit ativa como concluída no [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
-    *   Adiciona a nova rota ou arquivo gerado no [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md).
+    *   Marca a Work Unit ativa como concluída no [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
+    *   Adiciona a nova rota ou arquivo gerado no [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md).
     *   Salva o relatório da transação em `.ai-workspace/logs/`.
 *   **Limpeza e Purga:** Invoca o descarte da memória volátil no `Runtime State`, liberando o motor de execução para a próxima tarefa.

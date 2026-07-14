@@ -18,7 +18,7 @@ A execução simulou rigorosamente o pipeline cognitivo da Engine, validando a c
 ---
 
 ### Etapa 2: Planning Capability (Planejamento e Decomposição)
-* **Entrada:** Specification [.ai-workspace/specifications/capability-resolution-engine.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/capability-resolution-engine.md) e o histórico do [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+* **Entrada:** Specification [.ai-workspace/specifications/capability-resolution-engine.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/capability-resolution-engine.md) e o histórico do [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
 * **Payload utilizado:**
   ```json
   {
@@ -135,5 +135,5 @@ A execução simulou rigorosamente o pipeline cognitivo da Engine, validando a c
 ## 📈 Conclusões Técnicas e Validação Arquitetural
 
 1.  **Resolvedor de Capabilities Determinístico Homologado:** O algoritmo de cálculo do Matching Score ($MS$) provou ser robusto e deterministicamente capaz de mapear domínios e palavras-chave de forma matemática. A taxonomia de 12 categorias fornece o barramento conceitual ideal para organizar o repositório de Capabilities do framework.
-2.  **Mapeamento Unificado de Matriz de Resolução:** A tabela [Capability Resolution Matrix](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md#L67-L77) unifica o registro de prioridades, CS e contingência de fallback na base de conhecimento estática consumida pela Engine.
+2.  **Mapeamento Unificado de Matriz de Resolução:** A tabela [Capability Resolution Matrix](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md#L67-L77) unifica o registro de prioridades, CS e contingência de fallback na base de conhecimento estática consumida pela Engine.
 3.  **Preservação e Congelamento dos Componentes Core:** A integridade do freeze foi mantida a 100%. Nenhuma linha de código lúdico de equipes, classes ou infraestrutura da Engine central sofreu qualquer mutação.

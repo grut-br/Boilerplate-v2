@@ -7,3 +7,22 @@ export * from './config/index.ts';
 export * from './providers/gemini/index.ts';
 export * from './providers/anthropic/index.ts';
 export * from './diagnostics/index.ts';
+export * from './knowledge/index.ts';
+
+export {
+  PromptAssembler,
+  PromptBudget,
+  PromptSection,
+  PromptTemplate,
+  PromptLayout,
+  PromptMetrics,
+  PromptSnapshot,
+  PromptOptimizer,
+  PromptPolicies,
+  PromptAssemblyError,
+  PromptBudgetExceeded,
+  MandatorySectionMissing,
+  InvalidPromptLayout,
+} from './prompt/index.ts';
+
+export type { PromptMetadata } from './prompt/index.ts';

@@ -7,10 +7,10 @@ Este documento cataloga todos os artefatos estruturais, operacionais e de conhec
 | Documento | Responsabilidade | Quem Utiliza | Quem Consulta | Quando deve ser Utilizado |
 | :--- | :--- | :--- | :--- | :--- |
 | **Gerais / Raiz** | | | | |
-| [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md) | Manual geral de instruções, classificação de tarefas e ciclo operacional. | Desenvolvedor, IAs | Todos | Na inicialização do projeto e consultas de fluxo. |
-| [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md) | Snapshot Operacional com o progresso de tarefas e histórico de Work Units. | Manager, Desenvolvedor | Todos | A cada transição de status de tarefas ou sprints. |
-| [FRAMEWORK_READY.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_READY.md) | Certificação oficial da versão V2.1.1 e limites operacionais. | Todos | Todos | Ponto de partida inicial de novos projetos. |
-| [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md) | Mapa de navegação de contexto para indicar arquivos por situação técnica. | Manager | Todos | Na injeção inicial de prompts para economizar tokens. |
+| [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DEVELOPMENT_GUIDE.md) | Manual geral de instruções, classificação de tarefas e ciclo operacional. | Desenvolvedor, IAs | Todos | Na inicialização do projeto e consultas de fluxo. |
+| [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md) | Snapshot Operacional com o progresso de tarefas e histórico de Work Units. | Manager, Desenvolvedor | Todos | A cada transição de status de tarefas ou sprints. |
+| [FRAMEWORK_READY.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_READY.md) | Certificação oficial da versão V4 e limites operacionais. | Todos | Todos | Ponto de partida inicial de novos projetos. |
+| [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md) | Mapa de navegação de contexto para indicar arquivos por situação técnica. | Manager | Todos | Na injeção inicial de prompts para economizar tokens. |
 | **Rules (`.agents/rules/`)** | | | | |
 | [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) | Ancoragem de conduta, prioridade e regras inegociáveis de IA. | Agentes de IA | Desenvolvedor | Antes de iniciar qualquer tarefa de prompt ou código. |
 | [architecture.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/architecture.md) | Diretrizes e princípios estruturais (Clean Arch, FSD). | Manager, Executores | Todos | Em discussões técnicas e planejamento de módulos. |
@@ -67,6 +67,6 @@ Abaixo estão listados os componentes de infraestrutura física criados para o b
 
 ## 📜 Documentações do Framework
 
-* **[FRAMEWORK_ENTRYPOINT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_ENTRYPOINT.md):** Manual principal e ponto de inicialização unificado de execuções lógicas.
+* **[FRAMEWORK_ENTRYPOINT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_ENTRYPOINT.md):** Manual principal e ponto de inicialização unificado de execuções lógicas.
 * **[README.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/README.md):** Visão geral, estrutura do monorepo, como executar e roadmap da V3.1.
-* **[ARCHITECTURE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/ARCHITECTURE.md):** Grafo de dependências físicas dos pacotes e mapa de responsabilidades.
+* **[ARCHITECTURE_FREEZE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/architecture/ARCHITECTURE_FREEZE.md):** Congelamento arquitetural e mapa de responsabilidades.

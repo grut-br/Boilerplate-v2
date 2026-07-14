@@ -1,0 +1,46 @@
+# Workflow de Deploy Contínuo para a Hostinger (Backend/Supabase integration)
+#
+# Para este workflow funcionar, configure as seguintes Secrets no painel do repositório no GitHub:
+# - HOSTINGER_HOST: IP ou Host de conexão SSH da sua conta na Hostinger.
+# - HOSTINGER_USERNAME: Nome de usuário de SSH/FTP da Hostinger.
+# - HOSTINGER_SSH_KEY: Chave privada SSH autorizada no servidor Hostinger (deixe cadastrada a pública em ~/.ssh/authorized_keys na Hostinger).
+# - HOSTINGER_PORT: Porta SSH (padrão é 65002 na Hostinger, ou 22).
+# - HOSTINGER_TARGET_DIR: Caminho absoluto da pasta de destino no servidor Hostinger (ex: /home/u123456789/domains/seu-dominio.com/public_html/api).
+
+name: Continuous Deployment - Hostinger Backend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      # Sincroniza apenas quando há modificações na infraestrutura de API, middleware ou Supabase
+      - 'src/lib/supabase/**'
+      - 'src/middleware.ts'
+      - 'src/app/api/**'
+
+jobs:
+  deploy:
+    name: Deploy to Hostinger
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HOSTINGER_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p ${{ secrets.HOSTINGER_PORT || '65002' }} -H ${{ secrets.HOSTINGER_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Synchronize Files via Rsync (SSH)
+        run: |
+          # Sincroniza de forma incremental as pastas de biblioteca e API para o diretório de produção
+          rsync -avz -e "ssh -p ${{ secrets.HOSTINGER_PORT || '65002' }}" \
+            --exclude '.git*' \
+            --exclude 'node_modules' \
+            --exclude '.next' \
+            src/lib/supabase/ \
+            ${{ secrets.HOSTINGER_USERNAME }}@${{ secrets.HOSTINGER_HOST }}:${{ secrets.HOSTINGER_TARGET_DIR }}

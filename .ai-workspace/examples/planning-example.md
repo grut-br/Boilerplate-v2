@@ -87,4 +87,4 @@ graph LR
 ---
 
 ## 🏁 4. Julgamento do Result Processor
-O Result Processor verifica que a Planning Capability cumpriu o contrato de zero escrita de código em `src/`, validou a linearidade do grafo de tarefas e gerou arquivos de Work Unit estruturados com base no template oficial. O processor consolida a transação e atualiza o histórico em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+O Result Processor verifica que a Planning Capability cumpriu o contrato de zero escrita de código em `src/`, validou a linearidade do grafo de tarefas e gerou arquivos de Work Unit estruturados com base no template oficial. O processor consolida a transação e atualiza o histórico em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).

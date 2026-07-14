@@ -59,7 +59,7 @@ Uma Work Unit de Frontend é encerrada apenas quando a interface correspondente 
 * **Integração com Knowledge Layer:** Consulta e aplica ativamente as teorias operacionais permanentes (como `accessibility.md`, `ui.md`, `ux.md`, `performance.md`).
 
 ## 📚 Documentos Obrigatórios
-* [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md)
+* [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DEVELOPMENT_GUIDE.md)
 * [.agents/rules/always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md)
 * [.agents/rules/coding-style.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/coding-style.md)
 * As Skills locais de UI/UX portadas no repositório.

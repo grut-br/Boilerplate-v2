@@ -38,14 +38,14 @@ Transformar especificações estáticas de projeto em planos de execução detal
 ### Entradas (Inputs)
 * Especificação da feature em `.ai-workspace/specifications/` (ex: `planning-runtime.md`).
 * Decisões arquiteturais associadas em `.ai-workspace/decisions/` (ADRs).
-* Snapshot do estado de progresso em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+* Snapshot do estado de progresso em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
 
 ### Saídas (Outputs)
 * Plano de Execução estruturado contendo riscos, complexidades e capacidades requeridas.
 * Arquivos físicos de definição de Work Unit criados com base no template oficial da V3 em `.ai-workspace/specifications/active/` ou subpastas de planejamento.
 
 ### Dependências
-* Specifications, [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md) e [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md).
+* Specifications, [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md) e [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DEVELOPMENT_GUIDE.md).
 
 ---
 
@@ -60,11 +60,11 @@ Transformar especificações estáticas de projeto em planos de execução detal
 
 ### Contexto Obrigatório (Mandatory Context)
 * [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) (Ancoragem absoluta de conduta).
-* [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md) (Critérios gerais de divisão de tarefas).
+* [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DEVELOPMENT_GUIDE.md) (Critérios gerais de divisão de tarefas).
 
 ### Contexto Opcional (Optional Context)
-* [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md) (Histórico de sprints anteriores).
-* [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md) (Índice de arquivos do repositório).
+* [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md) (Histórico de sprints anteriores).
+* [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md) (Índice de arquivos do repositório).
 
 ### Contexto Proibido (Forbidden Context)
 * Todo o código-fonte de apresentação visual e lógica de dados em `src/`.
@@ -94,7 +94,7 @@ A Planning Capability não aciona ferramentas de validação física locais do d
 
 ## Allowed Side Effects
 * Geração do arquivo estático de planejamento e das Work Units físicas ativas em subpastas de `.ai-workspace/specifications/`.
-* Atualização do status de planejamento em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+* Atualização do status de planejamento em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
 
 ---
 

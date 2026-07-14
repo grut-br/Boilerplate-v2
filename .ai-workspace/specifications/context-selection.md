@@ -26,7 +26,7 @@ Entrada (Work Unit + Capability + Domínio)
 
 ### Detalhamento das Etapas:
 1. **Entrada de Parâmetros:** O Context Builder recebe a Work Unit ativa, a Capability acoplada pelo Loader e o domínio técnico da tarefa.
-2. **Resolução de Regras:** O Builder lê o arquivo [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md) para verificar quais guias conceituais são elegíveis ou obrigatórios para aquela Capability de acordo com o domínio.
+2. **Resolução de Regras:** O Builder lê o arquivo [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md) para verificar quais guias conceituais são elegíveis ou obrigatórios para aquela Capability de acordo com o domínio.
 3. **Mapeamento de Código:** A Engine examina as declarações de importações nos arquivos de código-fonte mapeados para a tarefa para agrupar arquivos de dependências imediatos.
 4. **Respeito a Proibições:** Todos os documentos declarados como proibidos (*Forbidden*) no contrato da Capability são sumariamente eliminados do payload.
 5. **Sanitização:** O Context Builder expurga comentários redundantes de documentação interna dos arquivos de regras para economizar tokens.

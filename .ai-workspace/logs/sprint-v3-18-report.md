@@ -18,7 +18,7 @@ Com a conclusão desta sprint, encerra-se oficialmente a modelagem da *Intellige
 ---
 
 ### Etapa 2: Planning Capability (Planejamento e Decomposição)
-* **Entrada:** Specification [.ai-workspace/specifications/execution-flow.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/execution-flow.md) e o histórico do [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+* **Entrada:** Specification [.ai-workspace/specifications/execution-flow.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/execution-flow.md) e o histórico do [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
 * **Payload utilizado:**
   ```json
   {
@@ -71,7 +71,7 @@ Com a conclusão desta sprint, encerra-se oficialmente a modelagem da *Intellige
   {
     "instruction": "Gravar entrypoint da framework, especificação de fluxo de execução, exemplos de fluxo de projeto completo e fluxo de microtask",
     "target_files": [
-      "C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_ENTRYPOINT.md",
+      "C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_ENTRYPOINT.md",
       "C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/execution-flow.md",
       "C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/examples/full-project-flow.md",
       "C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/examples/microtask-flow.md"
@@ -91,7 +91,7 @@ Com a conclusão desta sprint, encerra-se oficialmente a modelagem da *Intellige
   {
     "validation_rules": "markdown-and-links-integrity",
     "files_changed": [
-      "C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_ENTRYPOINT.md",
+      "C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_ENTRYPOINT.md",
       "C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/execution-flow.md",
       "C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/examples/full-project-flow.md",
       "C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/examples/microtask-flow.md"
@@ -136,6 +136,6 @@ Com a conclusão desta sprint, encerra-se oficialmente a modelagem da *Intellige
 
 ## 📈 Conclusões Técnicas e Validação Arquitetural
 
-1.  **Interface Pública e Ponto de Entrada Homologados:** O arquivo [FRAMEWORK_ENTRYPOINT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_ENTRYPOINT.md) passa a ser a interface pública oficial que centraliza a inicialização de qualquer execução lógica.
+1.  **Interface Pública e Ponto de Entrada Homologados:** O arquivo [FRAMEWORK_ENTRYPOINT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_ENTRYPOINT.md) passa a ser a interface pública oficial que centraliza a inicialização de qualquer execução lógica.
 2.  **Esteiras Padronizadas e Fast Track Validadas:** A Engine passa a classificar as tarefas de forma determinística, ativando caminhos normais (grafos de Work Units) ou caminhos acelerados de bypass de planejamento (Fast Track) para Micro Tasks pontuais, otimizando o consumo de tokens de contexto.
 3.  **Fechamento da Intelligence Layer:** Concluímos com sucesso toda a camada conceitual, analítica e de resolvedores de prioridade. O repositório está pronto para receber as capacidades operacionais de escrita na próxima fase, mantendo a blindagem estrita do núcleo da Engine congelada.

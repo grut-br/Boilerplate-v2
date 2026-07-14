@@ -25,11 +25,11 @@ graph TD
 1. **Specification:** O desenvolvedor humano ou o Control Plane introduz um arquivo de especificação técnica em `.ai-workspace/specifications/` definindo o escopo documental desejado (ex: documentar uma API, atualizar o README de um módulo).
 2. **Planning Capability:** Analisa a complexidade e cria uma Work Unit estruturada contendo o domínio `documentation`.
 3. **Capability Loader:** Analisa a Work Unit e carrega deterministicamente a Capability `v3-capability-documentation` com base no domínio.
-4. **Context Builder:** Filtra e carrega no prompt os arquivos obrigatórios ([always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DOCUMENTATION_GUIDELINES.md)), bloqueando a injeção de qualquer arquivo em `src/` ou configurações.
+4. **Context Builder:** Filtra e carrega no prompt os arquivos obrigatórios ([always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DOCUMENTATION_GUIDELINES.md)), bloqueando a injeção de qualquer arquivo em `src/` ou configurações.
 5. **Execution Engine:** Constrói o prompt definitivo e escreve as mudanças físicas nos arquivos `.md` do repositório.
 6. **Toolchain Gateway:** Executa checagens de sintaxe de markdown e valida se as referências cruzadas declaradas como links `file://` apontam para caminhos locais reais no computador do usuário.
 7. **Runtime State:** Garante que a transação possua um UUID isolado e muda o estado operacional de `Executing` para `Validating`, e posteriormente para `Completed`.
-8. **Result Processor:** Ao ler o status `PASS` da Toolchain, atualiza a lista de Work Units concluídas em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md), gera o log em `.ai-workspace/logs/` e descarta a memória operacional.
+8. **Result Processor:** Ao ler o status `PASS` da Toolchain, atualiza a lista de Work Units concluídas em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md), gera o log em `.ai-workspace/logs/` e descarta a memória operacional.
 
 ---
 
@@ -82,7 +82,7 @@ Qualquer documento gerado ou atualizado pela Capability deve seguir a seguinte e
 1. **Formato Markdown Padrão:** Utilização estrita das marcações GitHub Flavored Markdown (GFM).
 2. **Ausência de placeholders:** É proibido conter marcadores como `[Insira aqui]`, `TBD`, `TODO` ou textos genéricos.
 3. **Links Clicáveis no Padrão do Framework:** Todas as referências a arquivos locais devem ser representadas no formato:
-   `[Texto Descritivo](file:///C:/Users/lucas/Projetos/Boilerplate-v2/caminho/do/arquivo.md)`
+   Use texto descritivo e um caminho relativo válido para o arquivo Markdown.
 4. **Semântica Acessível:** Respeitar a hierarquia de títulos (`<h1>` único, cabeçalhos consecutivos sem saltar níveis, ex: `h2` -> `h3`).
 
 ---

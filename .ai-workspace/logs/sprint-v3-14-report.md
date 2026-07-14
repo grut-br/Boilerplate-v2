@@ -18,7 +18,7 @@ A execução simulou rigorosamente o pipeline cognitivo da Engine, validando a c
 ---
 
 ### Etapa 2: Planning Capability (Planejamento e Decomposição)
-* **Entrada:** Specification [.ai-workspace/specifications/planning-runtime.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/planning-runtime.md) e o histórico do [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+* **Entrada:** Specification [.ai-workspace/specifications/planning-runtime.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/planning-runtime.md) e o histórico do [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
 * **Payload utilizado:**
   ```json
   {
@@ -49,7 +49,7 @@ A execução simulou rigorosamente o pipeline cognitivo da Engine, validando a c
 ---
 
 ### Etapa 4: Context Builder (Hidratação do Buffer Cognitivo)
-* **Entrada:** A capability `v3-capability-planning`, as regras de [.agents/rules/always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md).
+* **Entrada:** A capability `v3-capability-planning`, as regras de [.agents/rules/always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DEVELOPMENT_GUIDE.md).
 * **Payload utilizado:**
   ```json
   {

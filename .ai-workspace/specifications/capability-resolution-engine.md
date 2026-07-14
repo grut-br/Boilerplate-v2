@@ -64,7 +64,7 @@ O **Confidence Score (CS)** representa a garantia de estabilidade e taxa de suce
 
 ## 👥 6. Grupos de Capabilities (Capability Groups)
 
-As Capabilities são organizadas em quatro grupos lógicos de controle no [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md):
+As Capabilities são organizadas em quatro grupos lógicos de controle no [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md):
 
 1.  **Control Group (Controle):** Módulos encarregados de orquestrar a Engine (ex: `planning`, `capability-loader`).
 2.  **Infrastructure Group (Infraestrutura):** Responsáveis por gerenciar dados e RAM (ex: `context-builder`, `runtime-state`, `result-processor`).

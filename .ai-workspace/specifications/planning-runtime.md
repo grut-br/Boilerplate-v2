@@ -8,7 +8,7 @@ Esta especificação define o comportamento lógico, o fluxo de dados em tempo d
 
 O runtime da Planning Capability consome de forma passiva os seguintes arquivos de contexto de prompt:
 1. **Specification de Requisitos:** Arquivo Markdown contendo a descrição funcional do escopo desejado em `.ai-workspace/specifications/[nome-da-feature].md`.
-2. **Snapshot Operacional:** O arquivo [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md) para sincronizar metadados e evitar a sobreposição de IDs de Work Units já executadas.
+2. **Snapshot Operacional:** O arquivo [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md) para sincronizar metadados e evitar a sobreposição de IDs de Work Units já executadas.
 3. **Decisões Arquiteturais:** Arquivos ADR na pasta `.ai-workspace/decisions/` para alinhar o planejamento às diretrizes tecnológicas previamente aprovadas.
 
 ---
@@ -54,7 +54,7 @@ graph TD
    * **Epic:** > 5 dias, envolve múltiplos subsistemas (deve ser dividido em múltiplos planos).
 3. **Decomposição Atômica:** Quebra o escopo de forma vertical em fatias atômicas de trabalho, gerando arquivos de Work Unit individuais.
 4. **Mapeamento de Dependências:** Organiza a ordem de execução cronológica. Cada Work Unit só pode ter dependências de WUs anteriores já concluídas ou no mesmo plano.
-5. **Associação de Capabilities:** Resoluções estritas para associar as Capabilities registradas no [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md).
+5. **Associação de Capabilities:** Resoluções estritas para associar as Capabilities registradas no [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md).
 6. **Emissão de Artefatos:** Grava fisicamente os arquivos de saídas sem interagir com arquivos de código.
 
 ---

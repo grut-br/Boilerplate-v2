@@ -18,10 +18,10 @@ Criamos a topologia de diretórios em conformidade com o escopo físico planejad
 ---
 
 ### 2. Configurações Compartilhadas na Raiz
-*   **[pnpm-workspace.yaml](file:///C:/Users/lucas/Projetos/Boilerplate-v2/pnpm-workspace.yaml):** Define a raiz dos pacotes de workspace em `apps/*` e `packages/*`.
-*   **[tsconfig.base.json](file:///C:/Users/lucas/Projetos/Boilerplate-v2/tsconfig.base.json):** Configuração TypeScript base compartilhada, ativando `"composite": true` e compatibilidade NodeNext.
-*   **[turbo.json](file:///C:/Users/lucas/Projetos/Boilerplate-v2/turbo.json):** Definição de tarefas paralelas e cacheadas (`build`, `lint`, `test`, `typecheck`, `dev`).
-*   **[.eslint.config.js](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.eslint.config.js):** Flat Config de ESLint comum para análise estática de todos os arquivos TypeScript.
+*   **`pnpm-workspace.yaml`:** Define a raiz dos pacotes de workspace em `apps/*` e `packages/*` (estrutura histórica posteriormente removida).
+*   **`tsconfig.base.json`:** Configuração TypeScript base compartilhada (estrutura histórica posteriormente removida).
+*   **`turbo.json`:** Definição histórica de tarefas paralelas e cacheadas (estrutura posteriormente removida).
+*   **` .eslint.config.js`:** Flat Config histórica de ESLint, posteriormente substituída por `eslint.config.mjs`.
 *   **[.prettierrc](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.prettierrc):** Configuração comum de formatação visual de código.
 *   **[.husky/pre-commit](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.husky/pre-commit):** Script pre-commit para auditoria de arquivos modificados via `lint-staged`.
 
@@ -57,8 +57,8 @@ Realizamos as checagens locais por terminal, atingindo sucesso em todas as estei
 
 ## 🏛️ Atualização Documental e de Estado
 
-*   **[PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md):** Status atualizado para a Sprint V3.1-01, registrando a Work Unit `WU-031` como concluída sob o status `Foundation Started`.
+*   **[PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md):** Status atualizado para a Sprint V3.1-01, registrando a Work Unit `WU-031` como concluída sob o status `Foundation Started`.
 *   **[README.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/README.md):** Documento recriado detalhando o propósito da Engine, visão geral dos workspaces, instruções de execução e o roadmap incremental da V3.1.
-*   **[ARCHITECTURE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/ARCHITECTURE.md):** Mapa físico do monorepo, relações de dependências em árvore (grafo) e responsabilidades de cada pacote.
+*   **`ARCHITECTURE.md`:** Mapa físico histórico do monorepo, posteriormente substituído pela arquitetura atual.
 *   **[framework-inventory.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/logs/framework-inventory.md):** Substituição dos componentes conceituais planejados pelos pacotes físicos e documentações reais do projeto V3.1.
 *   **[v3-roadmap.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/roadmap/v3-roadmap.md):** Transição para o planejamento de sprints da versão V3.1 física, marcando a fundação como concluída.

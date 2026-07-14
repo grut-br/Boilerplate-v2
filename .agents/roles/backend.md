@@ -59,7 +59,7 @@ Uma Work Unit de Backend é encerrada apenas quando a lógica correspondente est
 * **Integração com Knowledge Layer:** Consulta e aplica ativamente as teorias operacionais permanentes (como `security.md`, `business-rules.md`, `performance.md`, `testing.md`).
 
 ## 📚 Documentos Obrigatórios
-* [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md)
+* [DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DEVELOPMENT_GUIDE.md)
 * [.agents/rules/always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md)
 * [.agents/rules/coding-style.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/coding-style.md)
 * As Skills locais de Backend e Supabase portadas no repositório.

@@ -8,7 +8,7 @@ Este documento estabelece o manual operacional definitivo de tempo de execução
 
 O runtime da Documentation Capability consome um conjunto de dados isolado provido pelo Context Builder:
 1. **Work Unit Ativa (WU):** O arquivo contendo a definição da tarefa, critérios de aceitação e caminhos de arquivos de destino em `.ai-workspace/specifications/active/`.
-2. **Context Payload Hidratado:** Contendo os arquivos obrigatórios de regras do framework ([always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DOCUMENTATION_GUIDELINES.md)).
+2. **Context Payload Hidratado:** Contendo os arquivos obrigatórios de regras do framework ([always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) e [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DOCUMENTATION_GUIDELINES.md)).
 3. **Templates de Documentação:** Templates de referência em `.ai-workspace/templates/` (se houver).
 4. **Assinaturas de Código (Opcional/Passivo):** Código-fonte bruto referenciado na Work Unit, carregado apenas como leitura conceitual estrita.
 
@@ -75,7 +75,7 @@ O JSON abaixo detalha a estrutura de parâmetros da transação de execução:
     "specificationSource": "C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/documentation-runtime.md",
     "mandatoryContext": [
       "C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md",
-      "C:/Users/lucas/Projetos/Boilerplate-v2/DOCUMENTATION_GUIDELINES.md"
+      "C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DOCUMENTATION_GUIDELINES.md"
     ]
   },
   "runtimeOutputs": {

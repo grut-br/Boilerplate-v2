@@ -16,7 +16,7 @@ A integração e o ciclo de vida da `Analysis Capability` são executados atrav�
 
 ## 1. Criação (Creation)
 *   **Ação:** Uma nova Capability especializada é implementada escrevendo um arquivo declarativo em [.agents/capabilities/analysis.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/capabilities/analysis.md).
-*   **Conformidade:** O arquivo adota as seções e tabelas de metadados exigidas pelo [CAPABILITY_CONTRACT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/CAPABILITY_CONTRACT.md).
+*   **Conformidade:** O arquivo adota as seções e tabelas de metadados exigidas pelo [CAPABILITY_CONTRACT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/architecture/CAPABILITY_CONTRACT.md).
 *   **Garantia:** Zero linhas de código do núcleo da Engine ou lógica da aplicação são criadas ou editadas nesta etapa.
 
 ---
@@ -48,5 +48,5 @@ A integração e o ciclo de vida da `Analysis Capability` são executados atrav�
 ## 5. Remoção (Removal / Decoupling)
 *   **Ação:** Para expurgar o plugin da biblioteca e desativá-lo, o desenvolvedor humano precisa apenas:
     1. Excluir o arquivo físico [.agents/capabilities/analysis.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/capabilities/analysis.md).
-    2. Apagar as linhas de registro no [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md) e [CAPABILITY_CONTRACT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/CAPABILITY_CONTRACT.md).
+    2. Apagar as linhas de registro no [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md) e [CAPABILITY_CONTRACT.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/architecture/CAPABILITY_CONTRACT.md).
 *   **Garantia:** Como o ecossistema é baseado em injeção tardia (*Late Binding*) e resolução passiva de contexto, a remoção da capability não causa erros de build, falhas de compilação TypeScript, ou instabilidade nos módulos centrais da Engine, comprovando o desacoplamento arquitetural absoluto da versão V3.0.

@@ -25,22 +25,22 @@ Produzir documentação técnica padronizada a partir de especificações de fea
 ### Responsabilidades
 * Interpretar [Specifications](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/) e gerar manuais técnicos de fácil compreensão para engenheiros humanos e outros agentes de IA.
 * Elaborar e atualizar arquivos README para detalhar o escopo e uso de componentes e módulos do sistema.
-* Registrar decisões de arquitetura e design no formato de [Architectural Decision Records (ADRs)](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/decisions/).
+* Registrar decisões de arquitetura e design no formato de [Architectural Decision Records](../../docs/decisions/).
 * Gerar logs cronológicos de desenvolvimento e changelogs em `.ai-workspace/logs/` a partir do fechamento de tarefas.
 * Manter a integridade de referências cruzadas usando obrigatoriamente links markdown no esquema `file://`.
 
 ### Entradas (Inputs)
 * Specification de entrada localizada em `.ai-workspace/specifications/` (ex: `documentation-capability.md`).
 * Decisões arquiteturais associadas contidas em `.ai-workspace/decisions/` (ADRs).
-* Histórico de Work Units e Snapshot operacional presentes em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+* Histórico de Work Units e Snapshot operacional presentes em [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
 * Assinaturas de interfaces de código exportadas da Execution Engine (apenas para referência de escrita, de forma passiva).
 
 ### Saídas (Outputs)
 * Arquivos físicos estruturados em Markdown (.md) contendo manuais, guias, changelogs ou relatórios.
-* Atualização do catálogo de caminhos em [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md).
+* Atualização do catálogo de caminhos em [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md).
 
 ### Dependências
-* Specifications, [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DOCUMENTATION_GUIDELINES.md) e [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+* Specifications, [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DOCUMENTATION_GUIDELINES.md) e [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
 
 ---
 
@@ -55,11 +55,11 @@ Produzir documentação técnica padronizada a partir de especificações de fea
 
 ### Contexto Obrigatório (Mandatory Context)
 * [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md) (Ancoragem absoluta de conduta).
-* [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DOCUMENTATION_GUIDELINES.md) (Diretrizes de documentação e ownership).
+* [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DOCUMENTATION_GUIDELINES.md) (Diretrizes de documentação e ownership).
 
 ### Contexto Opcional (Optional Context)
-* [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md) (Contexto sobre a Work Unit corrente).
-* [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md) (Consulta de mapeamentos conceituais).
+* [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md) (Contexto sobre a Work Unit corrente).
+* [FRAMEWORK_INDEX.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md) (Consulta de mapeamentos conceituais).
 
 ### Contexto Proibido (Forbidden Context)
 * Código-fonte físico localizado na pasta `src/` (exceto quando assinaturas de tipos ou declarações de componentes forem explicitamente necessárias como referência passiva para a redação da documentação).
@@ -95,7 +95,7 @@ Esta Capability não interage diretamente com ferramentas de compilação físic
 ### Critérios de Sucesso
 * O artefato produzido reflete integralmente os requisitos declarados na Specification de origem.
 * O arquivo de saída possui formatação em markdown limpa, livre de erros de renderização e seguindo as regras de microcopy e clareza do [ux-writing/SKILL.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/skills/ux-writing/SKILL.md).
-* Todos os caminhos de arquivos referenciados utilizam links clicáveis formatados como `[nome-do-arquivo](file:///caminho/absoluto)`.
+* Todos os caminhos de arquivos referenciados utilizam links Markdown clicáveis com destinos válidos no repositório.
 * Zero alterações foram aplicadas sobre arquivos de código-fonte no diretório `src/`.
 
 ### Critérios de Falha

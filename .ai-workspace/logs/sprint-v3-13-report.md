@@ -18,7 +18,7 @@ A execução simulou rigorosamente o pipeline físico e lógico da Engine com o 
 ---
 
 ### Etapa 2: Planning Capability (Planejamento e Decomposição)
-* **Entrada:** O arquivo de especificação [.ai-workspace/specifications/documentation-capability.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/documentation-capability.md) e o snapshot [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+* **Entrada:** O arquivo de especificação [.ai-workspace/specifications/documentation-capability.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/documentation-capability.md) e o snapshot [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
 * **Payload utilizado:**
   ```json
   {

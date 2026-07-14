@@ -18,7 +18,7 @@ A execução realizou a validação ponta a ponta de todo o pipeline lógico e f
 ---
 
 ### Etapa 2: Planning Capability (Planejamento e Decomposição)
-* **Entrada:** Specification [.ai-workspace/specifications/documentation-runtime.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/documentation-runtime.md) e o histórico do [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md).
+* **Entrada:** Specification [.ai-workspace/specifications/documentation-runtime.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/specifications/documentation-runtime.md) e o histórico do [PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md).
 * **Payload utilizado:**
   ```json
   {
@@ -138,4 +138,4 @@ A execução realizou a validação ponta a ponta de todo o pipeline lógico e f
 
 1. **Validação Operacional Definitiva da Documentation Capability:** A capability foi exaustivamente testada ponta a ponta no pipeline operacional real da Framework Engine V3.0 (recepção ➔ hydration ➔ renderização ➔ validação ➔ entrega), atestando sua estabilidade técnica (Status: Validated).
 2. **Preservação Core Frozen:** O congelamento dos componentes da Engine Core (Loader, Builder, Processor, etc.) foi mantido a 100%. Nenhum arquivo lógico de compilação ou código-fonte do site sofreu alteração, demonstrando que a Engine cognitiva opera e evolui exclusivamente pela injeção modular de Capabilities sob demanda.
-3. **Mapeamento Unificado de Matriz:** A introdução da [Matriz Operacional de Capabilities](file:///C:/Users/lucas/Projetos/Boilerplate-v2/FRAMEWORK_INDEX.md#L53-L64) unifica o registro de responsabilidades, facilitando a portabilidade e permitindo o parse determinístico dos templates de referência.
+3. **Mapeamento Unificado de Matriz:** A introdução da [Matriz Operacional de Capabilities](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/framework/FRAMEWORK_INDEX.md#L53-L64) unifica o registro de responsabilidades, facilitando a portabilidade e permitindo o parse determinístico dos templates de referência.

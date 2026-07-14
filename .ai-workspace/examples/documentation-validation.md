@@ -13,7 +13,7 @@ Os critérios de aceitação exigem a criação de uma tabela de propriedades, u
 ## 🧠 2. Contexto Recebido (Hydrated Context)
 O buffer cognitivo da IA é alimentado com o seguinte conjunto mínimo de regras:
 *   [always-read.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.agents/rules/always-read.md)
-*   [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DOCUMENTATION_GUIDELINES.md)
+*   [DOCUMENTATION_GUIDELINES.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DOCUMENTATION_GUIDELINES.md)
 *   Assinatura de tipos extraída de `src/components/ui/Avatar.tsx`.
 
 ---

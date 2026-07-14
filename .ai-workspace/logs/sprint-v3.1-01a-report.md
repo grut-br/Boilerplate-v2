@@ -36,8 +36,8 @@ Foram mantidas as melhorias estéticas e de automação que agregam valor ao Boi
 ## 📂 Arquivos Alterados no Repositório
 
 1.  **[package.json](file:///C:/Users/lucas/Projetos/Boilerplate-v2/package.json):** Restauração de scripts clássicos de build (`next build`) e typecheck, e remoção da dependência de `turbo`.
-2.  **[PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/PROJECT_STATE.md):** Status atualizado para `PoC Cleanup & Architectural Realignment` na Sprint V3.1-01A, reclassificando a sprint V3.1-01 anterior como Proof of Concept (PoC) e gravando o fechamento da tarefa `WU-031A`.
-3.  **[DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/DEVELOPMENT_GUIDE.md):** Inclusão de alerta estratégico explicitando a remoção da estrutura física de monorepo e o desenvolvimento independente da Engine física.
+2.  **[PROJECT_STATE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/history/PROJECT_STATE.md):** Status atualizado para `PoC Cleanup & Architectural Realignment` na Sprint V3.1-01A, reclassificando a sprint V3.1-01 anterior como Proof of Concept (PoC) e gravando o fechamento da tarefa `WU-031A`.
+3.  **[DEVELOPMENT_GUIDE.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/docs/guides/DEVELOPMENT_GUIDE.md):** Inclusão de alerta estratégico explicitando a remoção da estrutura física de monorepo e o desenvolvimento independente da Engine física.
 4.  **[README.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/README.md):** Restauração do README original do Boilerplate contendo a nota explicativa do realinhamento arquitetural.
 5.  **[framework-inventory.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/logs/framework-inventory.md):** Atualização do inventário para refletir a nova topologia documental sem os pacotes e CLI deletados.
 6.  **[v3-roadmap.md](file:///C:/Users/lucas/Projetos/Boilerplate-v2/.ai-workspace/roadmap/v3-roadmap.md):** Atualização do roadmap indicando que a Sprint V3.1-01 representou uma PoC e que a esteira física foi realinhada para um repositório próprio.
